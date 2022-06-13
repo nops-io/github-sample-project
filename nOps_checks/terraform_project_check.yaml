@@ -1,0 +1,5 @@
+---
+project_path: "/Users/yograj/Documents/nops/github-sample-project/terraform_project1"
+project_name: terraform_project1
+threshold: 150
+operation: less_than

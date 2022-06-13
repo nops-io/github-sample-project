@@ -1,6 +1,8 @@
 name: nOps-pricing-action
 on:
   pull_request:
+    paths:
+      - terraform_project*
 env:
   AWS_REGION: us-east-1
   AWS_ACCESS_KEY_ID: ${{ secrets.NOPS_AWS_ACCESS_KEY }}
