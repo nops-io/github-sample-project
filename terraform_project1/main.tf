@@ -20,7 +20,7 @@ resource "aws_instance" "project1_ec2_instance_1" {
 }
 resource "aws_instance" "project1_ec2_instance_2" {
   ami           = "ami-2757f631"
-  instance_type = "t2.small"
+  instance_type = "t2.large"
   tags = {
     Name = "project1_instance_small"
   }
