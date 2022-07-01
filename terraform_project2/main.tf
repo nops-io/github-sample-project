@@ -11,19 +11,20 @@ provider "aws" {
 	region = "us-east-1"
 }
 
-resource "aws_instance" "project3_ec2_instance_1" {
+resource "aws_instance" "project2_ec2_instance_1" {
   ami           = "ami-2757f631"
-  instance_type = "t2.small"
+  instance_type = "t2.large"
   tags = {
-    Name = "project3_instance_small_1"
+    Name = "project2_instance_large_1"
   }
 }
-resource "aws_instance" "ec2_instance_2" {
+resource "aws_instance" "project2_ec2_instance_2" {
   ami           = "ami-2757f631"
-  instance_type = "t2.micro"
+  instance_type = "t2.xlarge"
   tags = {
-    Name = "project3_instance_micro"
+    Name = "project2_instance_xlarge_1"
   }
 
 }
+
 
