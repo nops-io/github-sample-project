@@ -35,3 +35,10 @@ resource "aws_instance" "project1_ec2_instance_3" {
   }
 }
 
+resource "aws_instance" "project1_ec2_instance_4" {
+  ami           = "ami-2757f631"
+  instance_type = "t2.medium"
+  tags = {
+    Name = "project1_instance_medium_2"
+  }
+}
