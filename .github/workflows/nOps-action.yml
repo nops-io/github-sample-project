@@ -26,7 +26,7 @@ jobs:
           python-version: 3.9
       - name: Install nOps SDK
         run:
-          pip install --index-url https://test.pypi.org/simple/ nops-sdk==0.3.1 --extra-index-url https://pypi.org/simple
+          pip install --index-url https://test.pypi.org/simple/ nops-sdk==0.7.1 --extra-index-url https://pypi.org/simple
       - name: Install nops-cli
         run:
           python3 -m pip install --upgrade pip
@@ -38,7 +38,7 @@ jobs:
       - name: Run nOps CLI on base branch
         id: nops_cli_run_base
         run: |
-          nops-cli ${TERRAFORM_PROJECT} --pricing --iac-type terraform --periodicity yearly --github_action --pr_number ${{ github.event.pull_request.number }} --repo_name ${GITHUB_REPOSITORY} --token ${{ secrets.ACCESS_TOKEN_GITHUB }} --json_out_file old_cost_impact.json
+          nops-cli ${TERRAFORM_PROJECT} --pricing --iac-type terraform --periodicity monthly --github_action --pr_number ${{ github.event.pull_request.number }} --repo_name ${GITHUB_REPOSITORY} --token ${{ secrets.ACCESS_TOKEN_GITHUB }} --json_out_file old_cost_impact.json
           cat NOPSCLI.log
       - name: Upload old cost impact 
         uses: actions/upload-artifact@v3
@@ -55,6 +55,6 @@ jobs:
       - name: Run nOps CLI on source branch
         id: nops_cli_run_source
         run: |
-          nops-cli ${TERRAFORM_PROJECT} --pricing --iac-type terraform --periodicity yearly --github_action --pr_number ${{ github.event.pull_request.number }} --repo_name ${GITHUB_REPOSITORY} --token ${{ secrets.ACCESS_TOKEN_GITHUB }} --json_in_file old_cost_impact.json 
+          nops-cli ${TERRAFORM_PROJECT} --pricing --iac-type terraform --periodicity monthly --github_action --pr_number ${{ github.event.pull_request.number }} --repo_name ${GITHUB_REPOSITORY} --token ${{ secrets.ACCESS_TOKEN_GITHUB }} --json_in_file old_cost_impact.json 
           cat NOPSCLI.log
 
