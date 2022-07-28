@@ -8,7 +8,7 @@ env:
   NOPS_API_KEY: ${{ secrets.NOPS_API_KEY }}
   NOPS_ENV: UAT
   LOG_LEVEL: DEBUG
-  TERRAFORM_PROJECT: terraform_project1 terraform_project2 terraform_project3 terraform_project4
+  TERRAFORM_PROJECT: terraform_project1 terraform_project2 terraform_project3 terraform_project4 eks_project
   
 jobs:
   nops-cli-job:
