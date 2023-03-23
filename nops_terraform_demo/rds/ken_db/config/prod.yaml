@@ -1,0 +1,14 @@
+
+rds_subnet_group: "nopsprod-rds-1uj2l1k1oedy6-dbsubnetgroup-1kdy6kydnw63p"
+
+rds_security_group: "sg-3d1e6e59"
+
+db_instance_class: "db.m4.large"
+
+monitoring_interval: 15
+
+cloudwatch_logs_exports:
+  - "slowquery"
+  - "error"
+
+deletion_protection: true

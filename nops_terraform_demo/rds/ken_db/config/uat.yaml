@@ -1,0 +1,11 @@
+rds_subnet_group: "nopsuat2-rds-1wi56kxs9krjg-dbsubnetgroup-ld6m3viko5hu"
+
+rds_security_group: "sg-f9dbac9d"
+
+db_instance_class: "db.t2.micro"
+
+monitoring_interval: 0
+
+cloudwatch_logs_exports: []
+
+deletion_protection: false
